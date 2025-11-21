@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Dashboard Financeiro</h1>
+        <p>Controle visual e estatístico dos seus investimentos</p>
+    </header>
+
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?q=80&w=1600" />
+        <div class="hero-text">
+            <h2>Gerencie, analise e cresça</h2>
+            <p>Acompanhe seus ganhos e perdas de forma intuitiva.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Valor Total Investido</h3>
+                <p id="valorInvestido">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>Lucro Total</h3>
+                <p id="lucroTotal">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>ROI</h3>
+                <p id="roi">0%</p>
+            </div>
+
+        </div>
+
+        <div class="grafico-area">
+            <h2>Gráfico dos Ganhos</h2>
+            <canvas id="graficoGanho"></canvas>
+        </div>
+
+        <div class="form-area">
+            <h2>Adicionar Entrada</h2>
+
+            <label>Valor Investido</label>
+            <input type="number" id="inputInvestido" placeholder="Digite o valor">
+
+            <label>Lucro Obído</label>
+            <input type="number" id="inputLucro" placeholder="Digite o lucro">
+
+            <button onclick="adicionarEntrada()">Adicionar</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para avaliação — Lucas Leite</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
